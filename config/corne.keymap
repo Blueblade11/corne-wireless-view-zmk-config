@@ -29,8 +29,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <180>;
             bindings =
-                <&mo 2>,
-                <&kp BACKSPACE>;
+                <&kp BACKSPACE, &mo 2>;
         };
     };
 
