@@ -23,12 +23,14 @@
     };
 
     behaviors {
-        right_mod: right_mod {
+        right_mod_tap: right_mod_tap {
             compatible = "zmk,behavior-tap-dance";
-            label = "RIGHT_MOD";
+            label = "RIGHT_MOD_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <180>;
-            bindings = <&mo 2>;
+            bindings =
+                <&mo 2>,
+                <&kp BACKSPACE>;
         };
     };
 
