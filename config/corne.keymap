@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/keys.h>
 
 &nice_view_spi {
-        cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
-    };
+    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+};
 
 / {
     combos {
@@ -60,10 +60,10 @@
 
             label = "Lower";
             bindings = <
-  &kp TAB  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5         &kp N6      &kp N7    &kp N8        &kp N9    &kp N0    &kp BSPC
-&kp LCTRL  &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET   &kp AMPS  &kp ASTERISK  &kp LPAR  &kp RPAR  &kp GRAVE
-&kp LSHFT  &kp EQUAL  &kp MINUS  &kp PLUS  &kp LBRC  &kp LBKT       &kp RBKT    &kp RBRC  &kp PLUS      &kp PIPE  &kp BSLH  &kp TILDE
-                                 &kp LGUI  &trans    &kp SPACE      &kp RET     &trans    &kp RALT
+  &kp TAB     &kp N1     &kp N2    &kp N3     &kp N4     &kp N5       &kp N6    &kp N7        &kp N8    &kp N9    &kp N0   &kp BSPC
+&kp LCTRL   &kp EXCL     &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTERISK  &kp LPAR  &kp RPAR  &kp GRAVE
+&kp LSHFT  &kp EQUAL  &kp MINUS  &kp PLUS  &kp UNDER     &trans       &trans    &trans        &trans    &trans  &kp BSLH  &kp TILDE
+                                 &kp LGUI     &trans  &kp SPACE      &kp RET    &trans      &kp RALT
             >;
         };
 
@@ -75,22 +75,24 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             label = "Raise";
+
             // add in function keys, directional arrows
+
             bindings = <
-   &kp TAB        &trans        &trans        &trans        &trans        &trans        &trans    &kp LBKT          &kp RBKT    &kp          &kp GRAVE    &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &trans    &kp LEFT_ARROW    &kp UP      &kp RIGHT    &trans       &trans
- &kp LSHFT        &trans        &trans        &trans        &trans        &trans        &trans    &trans            &trans      &trans       &trans       &trans
-                                            &kp LGUI        &trans     &kp SPACE        &kp RET   &trans            &kp RALT
+   &kp TAB        &kp F1        &trans        &trans        &trans        &trans     &trans  &kp LBKT  &kp RBKT     &kp F9  &kp GRAVE  &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &trans  &kp LEFT    &kp UP  &kp RIGHT  &kp PG_UP    &trans
+ &kp LSHFT        &trans        &trans        &trans        &trans        &trans     &trans    &trans  &kp DOWN     &trans  &kp PG_DN    &trans
+                                            &kp LGUI        &trans     &kp SPACE    &kp RET    &trans  &kp RALT
             >;
         };
 
-//         layer_3 {
-//             bindings = <
-// &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-// &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-// &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-//                         &trans  &trans  &trans    &trans  &trans  &trans
-//             >;
-//         };
+        //         layer_3 {
+        //             bindings = <
+        // &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        // &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        // &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        //                         &trans  &trans  &trans    &trans  &trans  &trans
+        //             >;
+        //         };
     };
 };
