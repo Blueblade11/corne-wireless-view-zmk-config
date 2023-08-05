@@ -18,25 +18,29 @@
     };
 
     behaviors {
-        kp_mo: kp_mo {
+        km: keypress_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "KP_MO";
-            bindings =
-                <&kp>,
-                <&mo>;
-
+            label = "KEYPRESS_LAYER";
+            bindings = <&kp>, <&mo>;
             #binding-cells = <2>;
             tapping-term-ms = <180>;
+            flavor = "hold-preferred";
         };
-        caps_shift: caps_shift {
+        cs: caps_shift {
             compatible = "zmk,behavior-tap-dance";
             label = "CAPS_SHIFT";
             #binding-cells = <0>;
-            bindings =
-                <&kp LSHFT>,
-                <&kp CAPS>;
-
             tapping-term-ms = <200>;
+            bindings = <&kp LSHFT>, <&kp CAPS>;
+        };
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
     };
 
@@ -52,10 +56,17 @@
 
             label = "Base";
             bindings = <
-    &kp TAB  &kp Q  &kp W     &kp E  &kp R      &kp T      &kp Y          &kp U      &kp I    &kp O  &kp SEMI  &kp BSPC
-  &kp LCTRL  &kp A  &kp S     &kp D  &kp F      &kp G      &kp H          &kp J      &kp K    &kp L     &kp P   &kp SQT
-&caps_shift  &kp Z  &kp X     &kp C  &kp V      &kp B      &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp ESC
-                           &kp LGUI  &mo 1  &kp SPACE    &kp RET  &kp_mo BSPC 2   &kp RALT
+&kp TAB    &kp Q    &kp W    &kp E    &kp R       &kp T
+&kp Y      &kp U    &kp I    &kp O    &kp SEMI    &kp BSPC
+
+&kp LCTRL    &hm LGUI A    &hm LALT S    &hm LCTRL D    &hm LSFT F   &kp G      
+&kp H        &hm RSFT J    &hm RCTRL K   &hm LALT  L    &hm RGUI P   &kp SQT
+
+ &cs    &kp Z    &kp X        &kp C      &kp V       &kp B
+        &kp N   &kp M    &kp COMMA    &kp DOT    &kp FSLH    &kp ESC
+
+&kp LGUI  &mo 1        &kp SPACE    
+&kp RET   &km BSPC 2   &kp RALT
             >;
         };
 
