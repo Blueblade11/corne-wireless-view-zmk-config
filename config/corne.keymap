@@ -115,10 +115,10 @@
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6   |  7  |  8  |  9  |  0  | BKSP |
-            // | CTRL |     |     |     |     | TAB |   | VOL+ |  [  |  ]  |  '  |  ;  |  ~   |
-            // | SHFT |  =  |  -  |  `  |  _  | ESC |   | VOL- | PRV | PLY | NXT |  \  |  `   |
-            //                    |     |     | SPC |   | ENT  |     |     |
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | CTRL |     |     |     |     | TAB |   |     |  [  |  ]  |  '  |  ;  |  ~   |
+            // | SHFT |  =  |  -  |  `  |  _  | ESC |   |     | PRV | PLY | NXT |  \  |  `   |
+            //                    |     |     | SPC |   | ENT |     |     |
 
             label = "shita";
 
@@ -134,10 +134,10 @@
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // | TAB  |  F1 |  F2 |  F3  |  F4  |  F5  |   |   F6  |  F7  |  F8 |  F9 |  F10 |   DEL |
-            // | CTRL | F11 | F12 | INT1 | INT2 | INT3 |   |  MENU |  LFT |  UP | RGT | PGUP | PSCRN |
-            // | SHFT |     |     |      |      |      |   | PSCRN | HOME | DWN | END | PGDN | K_PWR |
-            //                    |      |      |  SPC |   |  ENT  |      |     |
+            // | TAB  |  F1 |  F2  |  F3  |  F4  |  F5  |   |   F6  |  F7  |  F8 |  F9 |  F10 |   DEL |
+            // | CTRL | F11 |  F12 | INT1 | INT2 | INT3 |   |  MENU |  LFT |  UP | RGT | PGUP | PSCRN |
+            // | SHFT |     | MUTE | VOL- | VOL+ |      |   | PSCRN | HOME | DWN | END | PGDN | K_PWR |
+            //                     |      |      |  SPC |   |  ENT  |      |     |
 
             label = "ue";
 
@@ -153,10 +153,10 @@
 
         bt_layer {
             // -----------------------------------------------------------------------------------------
-            // |    | PWR |     |     |     |     |   |     |     |     |     |     |     |
-            // |    | BT0 | BT1 | BT2 | BT3 | BT4 |   |     |     |     |     |     |     |
-            // |    |     |     | PRV | NXT | CLR |   |     |     |     |     |     |     |
-            //                  |     |     | SPC |   |     |     |     |
+            // |    | PWR |     |     |     |     |   |      |     |     |     |     |     |
+            // |    | BT0 | BT1 | BT2 | BT3 | BT4 |   | BGT+ |     |     |     |     |     |
+            // |    |     |     | PRV | NXT | CLR |   | BGT- |     |     |     |     |     |
+            //                  |     |     | SPC |   |      |     |     |
 
             label = "paso";
             bindings = <
