@@ -18,6 +18,7 @@
     };
 
     behaviors {
+        // del/backspace functionality for layer keys
         km: keypress_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "KEYPRESS_LAYER";
@@ -30,6 +31,8 @@
             quick-tap-ms = <125>;
             flavor = "hold-preferred";
         };
+
+        // simple caps shift toggle
         cs: caps_shift {
             compatible = "zmk,behavior-tap-dance";
             label = "CAPS_SHIFT";
@@ -39,6 +42,8 @@
                 <&kp LSHFT>,
                 <&kp CAPS>;
         };
+
+        // different homerow mods durations for index vs secondary fingers (pinkies lol)
         hms: homerow_mods_short {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_SHORT";
