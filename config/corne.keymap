@@ -94,9 +94,6 @@
             //                    | GUI |     | SPC |   | ENT |      | ALT |
 
             label = "Raise";
-
-            // add in function keys, directional arrows
-
             bindings = <
    &kp TAB        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5     &kp F6    &kp F7    &kp F8     &kp F9    &kp F10    &kp DEL
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &trans  &kp LEFT    &kp UP  &kp RIGHT  &kp PG_UP  &kp PSCRN
@@ -105,13 +102,5 @@
             >;
         };
 
-        //         layer_3 {
-        //             bindings = <
-        // &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        // &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        // &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        //                         &trans  &trans  &trans    &trans  &trans  &trans
-        //             >;
-        //         };
     };
 };
