@@ -70,7 +70,7 @@
             #binding-cells = <0>;
             bindings = <&kp SEMI>, <&kp TAB>;
             mods = <(MOD_LALT|MOD_RALT)>;        
-        }
+        };
 
         // Uses nested hold tap inside of tap dance
 
