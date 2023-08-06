@@ -67,7 +67,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&km 2 BSPC>, <&kp BSPC>;
-        }
+        };
     };
 
     keymap {
