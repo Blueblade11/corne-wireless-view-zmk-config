@@ -22,8 +22,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "KEYPRESS_LAYER";
             bindings =
-                <&kp BSPC>,
-                <&mo 2>;
+                <&kp>,
+                <&mo>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
