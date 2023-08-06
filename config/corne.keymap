@@ -100,7 +100,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             label = "moto";
-            //label = "元";
+            //元
             bindings = <
   &kp TAB        &kp Q        &kp W         &kp E         &kp R      &kp T      &kp Y         &kp U         &kp I        &kp O     &sc_tab   &kp BSPC
 &kp LCTRL  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hms LSHFT F      &kp G      &kp H  &hms RSHFT J  &hml RCTRL K  &hml LALT L  &hml RGUI P   &kp SQT
@@ -116,8 +116,8 @@
             // | SHFT |  =  |  -  |  +  |  _  |     |   |     |     |     |  |  |  \  |  `   |
             //                    | GUI | n/a | SPC |   | ENT |     | ALT |
 
-            label = "under";
-            //label = "下";
+            label = "shita";
+            //下
             bindings = <
 &kp TAB     &kp N1     &kp N2    &kp N3     &kp N4     &kp N5     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &kp BSPC
  &trans     &trans     &trans    &trans     &trans    &kp TAB     &trans  &kp LBKT  &kp RBKT   &kp SQT  &kp SEMI  &kp GRAVE
@@ -133,8 +133,8 @@
             // | SHFT | BT1 | BT2 | BT3 | BT4 |   BT5 |   |      | HOME | DWN | END | PGDN | K_PWR |
             //                    | GUI |     |   SPC |   | ENT  |  n/a | ALT |
 
-            label = "over";
-            //label = "上";
+            label = "ue";
+            //上
             bindings = <
 &kp TAB        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5         &kp F6    &kp F7    &kp F8     &kp F9    &kp F10    &kp DEL
  &trans        &kp F11      &kp F12        &trans        &trans    &bt BT_CLR    &kp K_CMENU  &kp LEFT    &kp UP  &kp RIGHT  &kp PG_UP  &kp PSCRN
