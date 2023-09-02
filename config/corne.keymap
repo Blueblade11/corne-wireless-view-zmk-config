@@ -184,10 +184,10 @@
             // WASD LAYER
 
             bindings = <
- &kp ESC     &kp TAB  &kp Q  &kp W   &kp E      &kp R    &none  &kp A  &kp P  &kp E      &kp X  &to 0
-   &kp Y  &kp LSHIFT  &kp A  &kp S   &kp D      &kp F    &none  &none  &none  &none      &none  &none
-&kp LALT   &kp LCTRL  &kp Z  &kp X   &kp T      &kp B    &none  &none  &none  &none  &kp PSCRN  &none
-                             &mo 5  &kp N3  &kp SPACE    &none  &none  &none
+ &kp ESC     &kp TAB  &kp Q   &kp W      &kp E  &kp R    &none  &kp A  &kp P  &kp E      &kp X  &to 0
+   &kp Y  &kp LSHIFT  &kp A   &kp S      &kp D  &kp F    &none  &none  &none  &none      &none  &none
+&kp LALT   &kp LCTRL  &kp Z   &kp X      &kp T  &kp B    &none  &none  &none  &none  &kp PSCRN  &none
+                             &kp N3  &kp SPACE  &mo 5    &none  &none  &none
             >;
         };
 
@@ -205,10 +205,10 @@
             // helper layer for numrow etc.
 
             bindings = <
-&trans  &kp N5  &kp N1  &trans  &kp N2  &kp N4    &none  &none  &none  &none  &none  &none
+&kp N6  &kp N5  &kp N1  &trans  &kp N2  &kp N4    &none  &none  &none  &none  &none  &none
 &kp F1  &trans  &trans  &trans  &trans   &kp G    &none  &none  &none  &none  &none  &none
- &none   &none   &none   &none  &kp N6   &none    &none  &none  &none  &none  &none  &none
-                         &none  &trans   &none    &none  &none  &none
+ &none   &none   &none   &none   &kp C   &kp V    &none  &none  &none  &none  &none  &none
+                        &trans  &trans   &none    &none  &none  &none
             >;
         };
     };
