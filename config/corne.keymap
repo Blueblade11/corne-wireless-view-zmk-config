@@ -110,7 +110,7 @@
 
             label = "MOTO";
             bindings = <
-&hml LALT GRAVE   &kp Q  &kp W        &kp F         &kp P         &kp G        &kp J    &kp L         &kp U          &kp Y        &kp SEMI  &hms BSPC LBKT
+&hml LALT GRAVE   &kp Q  &kp W        &e_f_kp       &kp P         &kp G        &kp J    &kp L         &kp U          &kp Y        &kp SEMI  &hms BSPC LBKT
 &hml LCTRL EQUAL  &kp A  &hml LALT R  &hms LCTRL S  &hms LSHFT T  &kp D        &kp H    &hms RSHFT N  &hms RCTRL E   &hml LALT I  &kp O     &kp SQT
 &hml LSHFT MINUS  &kp Z  &kp X        &kp C         &kp V         &kp B        &kp K    &kp M         &kp COMMA      &kp DOT      &kp FSLH  &kp RBKT
                                       &km 3 LGUI    &km 1 DEL     &kp SPACE    &kp RET  &km 2 BSPC    &kp LA(LSHFT)
