@@ -106,7 +106,7 @@
             //元, default layer
 
             bindings = <
-&kp GRAVE         &kp Q  &kp W        &kp P         &kp R         &kp G        &kp Y    &kp U         &kp K          &kp L        &kp SEMI  &hms BSPC LBKT
+&hml LALT GRAVE   &kp Q  &kp W        &kp P         &kp R         &kp G        &kp Y    &kp U         &kp K          &kp L        &kp SEMI  &hms BSPC LBKT
 &hml LCTRL EQUAL  &kp A  &hml LALT S  &hms LCTRL D  &hms LSHFT F  &kp T        &kp H    &hms RSHFT J  &hms RCTRL E   &hml LALT I  &kp O     &kp SQT
 &hml LSHFT MINUS  &kp Z  &kp X        &kp C         &kp V         &kp B        &kp N    &kp M         &kp COMMA      &kp DOT      &kp FSLH  &kp RBKT
                                       &km 3 LGUI    &km 1 DEL     &kp SPACE    &kp RET  &km 2 BSPC    &kp LA(LSHFT)
@@ -125,10 +125,10 @@
             //下, lower
 
             bindings = <
-&trans  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6   &kp N7      &kp N8            &kp N9      &kp N0    &kp BSPC
-&trans  &kp LGUI   &trans     &trans     &cs        &kp TAB      &trans   &trans      &trans            &trans      &kp RGUI  &trans
-&trans  &kp EQUAL  &kp MINUS  &kp GRAVE  &kp UNDER  &kp ESC      &trans   &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp BSLH  &trans
-                              &kp LGUI   &trans     &kp SPACE    &kp RET  &trans      &trans
+&kp LALT   &kp N1    &kp N2   &kp N3    &kp N4  &kp N5       &kp N6   &kp N7      &kp N8            &kp N9      &kp N0    &kp BSPC
+&kp LCTRL  &kp LGUI  &kp ESC  &trans    &cs     &kp TAB      &trans   &trans      &trans            &trans      &trans    &trans
+&kp LSHFT  &kp N6    &kp N7   &kp N8    &kp N9  &kp N0       &trans   &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp BSLH  &trans
+                              &kp LGUI  &trans  &kp SPACE    &kp RET  &trans      &trans
             >;
         };
 
@@ -184,10 +184,10 @@
             // WASD LAYER
 
             bindings = <
-&kp ESC   &kp TAB     &kp Q  &kp W   &kp E      &kp R    &none  &kp A  &kp P  &kp E  &kp X      &to 0
-&kp Y     &kp LSHIFT  &kp A  &kp S   &kp D      &kp F    &none  &none  &none  &none  &none      &none
-&kp LALT  &kp LCTRL   &kp Z  &kp X   &kp T      &kp B    &none  &none  &none  &none  &kp PSCRN  &none
-                             &kp N3  &kp SPACE  &mo 5    &none  &none  &none
+&kp T      &kp TAB     &kp Q  &kp W     &kp E      &kp R    &none  &kp A  &kp P  &kp E  &kp X      &to 0
+&kp ESC    &kp LSHIFT  &kp A  &kp S     &kp D      &kp F    &none  &none  &none  &none  &none      &none
+&kp LCTRL  &kp N3      &kp Z  &kp X     &kp C      &kp B    &none  &none  &none  &none  &kp PSCRN  &none
+                              &kp LALT  &kp SPACE  &mo 5    &none  &none  &none
             >;
         };
 
@@ -207,7 +207,7 @@
             bindings = <
 &kp N6  &kp N5  &kp N1  &trans  &kp N2  &kp N4    &none  &none  &none  &none  &none  &none
 &kp F1  &trans  &trans  &trans  &trans  &kp G     &none  &none  &none  &none  &none  &none
-&none   &none   &none   &none   &kp C   &kp V     &none  &none  &none  &none  &none  &none
+&none   &none   &none   &none   &kp Y   &kp V     &none  &none  &none  &none  &none  &none
                         &trans  &trans  &none     &none  &none  &none
             >;
         };
