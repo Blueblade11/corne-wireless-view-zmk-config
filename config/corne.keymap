@@ -102,6 +102,19 @@
         // };
     };
 
+    macros {
+        screenshot: screenshot {
+            label = "SCREENSHOT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT &kp LGUI>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LSHFT &kp LGUI>
+                ;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -134,8 +147,8 @@
 
             label = "UE";
             bindings = <
-&kp TAB  &trans  &trans      &trans            &trans        &trans        &trans       &trans    &trans    &trans     &kp BSPC   &kp DEL
-&trans   &trans  &trans      &kp C_VOL_DN      &kp C_VOL_UP  &kp C_MUTE    &kp K_CMENU  &kp LEFT  &kp UP    &kp RIGHT  &kp PG_UP  &kp PSCRN
+&trans   &trans  &trans      &trans            &trans        &trans        &trans       &trans    &trans    &kp INS    &kp BSPC   &kp DEL
+&trans   &trans  &trans      &kp C_VOL_DN      &kp C_VOL_UP  &kp C_MUTE    &kp K_CMENU  &kp LEFT  &kp UP    &kp RIGHT  &kp PG_UP  &screenshot
 &trans   &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &to 4         &kp PSCRN    &kp HOME  &kp DOWN  &kp END    &kp PG_DN  &kp C_PWR
                              &trans            &trans        &kp SPACE     &kp RET      &trans    &trans
             >;
@@ -160,9 +173,9 @@
 
             label = "GAME0";
             bindings = <
-&kp T      &kp TAB     &kp Q  &kp W     &kp E      &kp R    &none  &kp A  &kp P  &kp E  &kp X      &to 0
-&kp ESC    &kp LSHIFT  &kp A  &kp S     &kp D      &kp F    &none  &none  &none  &none  &none      &none
-&kp LCTRL  &kp N3      &kp Z  &kp X     &kp C      &kp B    &none  &none  &none  &none  &kp PSCRN  &none
+&kp ESC    &kp TAB     &kp Q  &kp W     &kp E      &kp R    &none  &kp A  &kp P  &kp E  &kp X      &to 0
+&kp N3     &kp LSHIFT  &kp A  &kp S     &kp D      &kp F    &none  &none  &none  &none  &none      &none
+&kp T      &kp LCTRL   &kp Z  &kp X     &kp C      &kp V    &none  &none  &none  &none  &kp PSCRN  &none
                               &kp LALT  &kp SPACE  &mo 5    &none  &none  &none
             >;
         };
