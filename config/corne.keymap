@@ -163,6 +163,17 @@
                 , <&macro_release &kp LSHFT &kp LGUI>
                 ;
         };
+
+        // degree symbol
+        degree: degree {
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>
+                , <&macro_release &kp LALT>
+                ;
+        };
     };
 
     keymap {
@@ -171,7 +182,7 @@
         default_layer {
             //元, default layer
 
-            label = "MOTO";
+            label = "moto";
             bindings = <
 &hml LALT GRAVE   &kp Q    &kp W            &f_e          &p_r              &g_t         /*||*/     &kp J    &kp L         &kp U          &kp Y        &semi_p   &hms BSPC LBKT
 &hml LCTRL EQUAL  &kp A    &hm_c_rs LALT 0  &hms LCTRL S  &hm_c_tg LSHFT 0  &kp D        /*||*/     &kp H    &hms RSHFT N  &hms RCTRL E   &hml LALT I  &kp O     &kp SQT
@@ -183,11 +194,11 @@
         lower_layer {
             //下, lower
 
-            label = "SHITA";
+            label = "shota";
             bindings = <
 &kp LALT   &kp N1    &kp N2   &kp N3    &kp N4  &kp N5       &kp F1   &kp F2  &kp F3  &kp F4   &kp F5    &kp F6
 &kp LCTRL  &kp LGUI  &kp ESC  &trans    &cs     &kp TAB      &kp F7   &kp F8  &kp F9  &kp F10  &kp F11   &kp F12
-&kp LSHFT  &kp N6    &kp N7   &kp N8    &kp N9  &kp N0       &trans   &trans  &trans  &trans   &kp BSLH  &trans
+&kp LSHFT  &kp N6    &kp N7   &kp N8    &kp N9  &kp N0       &trans   &trans  &trans  &degree  &kp BSLH  &trans
                               &kp LGUI  &trans  &kp SPACE    &kp RET  &trans  &trans
             >;
         };
@@ -195,11 +206,11 @@
         raise_layer {
             //上, upper
 
-            label = "UE";
+            label = "uey";
             bindings = <
 &trans   &trans  &trans      &trans            &trans        &trans        &trans       &trans    &trans    &kp INS    &kp BSPC   &kp DEL
 &trans   &trans  &trans      &kp C_VOL_DN      &kp C_VOL_UP  &kp C_MUTE    &kp K_CMENU  &kp LEFT  &kp UP    &kp RIGHT  &kp PG_UP  &screenshot
-&trans   &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &to 4         &kp PSCRN    &kp HOME  &kp DOWN  &kp END    &kp PG_DN  &kp C_PWR
+&trans   &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &trans        &kp PSCRN    &kp HOME  &kp DOWN  &kp END    &kp PG_DN  &kp C_PWR
                              &trans            &trans        &kp SPACE     &kp RET      &trans    &trans
             >;
         };
@@ -207,7 +218,7 @@
         bt_layer {
             // bluetooth controls and other PC controls
 
-            label = "BLUTOOSU";
+            label = "blutooth";
             bindings = <
 &trans  &kp C_POWER   &kp K_POWER   &trans        &trans        &trans          &trans                &trans  &trans  &trans  &trans  &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_BRIGHTNESS_INC  &trans  &trans  &trans  &trans  &trans
@@ -216,32 +227,32 @@
             >;
         };
 
-        // id: 4
+//         // id: 4
 
-        game_layer {
-            // WASD LAYER
+//         game_layer {
+//             // WASD LAYER
 
-            label = "GAME0";
-            bindings = <
-&kp ESC    &kp TAB     &kp Q  &kp W     &kp E      &kp R    &none  &kp A  &kp P  &kp E  &kp X      &to 0
-&kp N3     &kp LSHIFT  &kp A  &kp S     &kp D      &kp F    &none  &none  &none  &none  &none      &none
-&kp T      &kp LCTRL   &kp Z  &kp X     &kp C      &kp V    &none  &none  &none  &none  &kp PSCRN  &none
-                              &kp LALT  &kp SPACE  &mo 5    &none  &none  &none
-            >;
-        };
+//             label = "GAME0";
+//             bindings = <
+// &kp ESC    &kp TAB     &kp Q  &kp W     &kp E      &kp R    &none  &kp A  &kp P  &kp E  &kp X      &to 0
+// &kp N3     &kp LSHIFT  &kp A  &kp S     &kp D      &kp F    &none  &none  &none  &none  &none      &none
+// &kp T      &kp LCTRL   &kp Z  &kp X     &kp C      &kp V    &none  &none  &none  &none  &kp PSCRN  &none
+//                               &kp LALT  &kp SPACE  &mo 5    &none  &none  &none
+//             >;
+//         };
 
-        // id: 5
+//         // id: 5
 
-        game_layer_2 {
-            // helper layer for numrow etc.
+//         game_layer_2 {
+//             // helper layer for numrow etc.
 
-            label = "GAME1";
-            bindings = <
-&kp N6  &kp N5  &kp N1  &trans  &kp N2  &kp N4    &none  &none  &none  &none  &none  &none
-&kp F1  &trans  &trans  &trans  &trans  &kp G     &none  &none  &none  &none  &none  &none
-&none   &none   &none   &none   &kp Y   &kp V     &none  &none  &none  &none  &none  &none
-                        &trans  &trans  &none     &none  &none  &none
-            >;
-        };
+//             label = "GAME1";
+//             bindings = <
+// &kp N6  &kp N5  &kp N1  &trans  &kp N2  &kp N4    &none  &none  &none  &none  &none  &none
+// &kp F1  &trans  &trans  &trans  &trans  &kp G     &none  &none  &none  &none  &none  &none
+// &none   &none   &none   &none   &kp Y   &kp V     &none  &none  &none  &none  &none  &none
+//                         &trans  &trans  &none     &none  &none  &none
+//             >;
+//         };
     };
 };
