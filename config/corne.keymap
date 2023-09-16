@@ -38,7 +38,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CAPS_SHIFT";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings =
                 <&kp LSHFT>,
                 <&kp CAPS>;
@@ -73,8 +73,8 @@
             label = "F_E";
             #binding-cells = <0>;
             bindings =
-                <&kp E>,
-                <&kp F>;
+                <&kp F>,
+                <&kp E>;
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
@@ -83,8 +83,8 @@
             label = "T_G";
             #binding-cells = <0>;
             bindings =
-                <&kp G>,
-                <&kp T>;
+                <&kp T>,
+                <&kp G>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
@@ -93,21 +93,62 @@
             label = "G_T";
             #binding-cells = <0>;
             bindings =
-                <&kp T>,
-                <&kp G>;
+                <&kp G>,
+                <&kp T>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
-        hm_lc: homerow_mods_lctrl {
+        r_s: r_s {
+            compatible = "zmk,behavior-mod-morph";
+            label = "R_S";
+            #binding-cells = <0>;
+            bindings =
+                <&kp R>,
+                <&kp S>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+        p_r: p_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "P_R";
+            #binding-cells = <0>;
+            bindings =
+                <&kp P>,
+                <&kp R>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+        semi_p: semi_p {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMI_P";
+            #binding-cells = <0>;
+            bindings =
+                <&kp SEMI>,
+                <&kp P>;
+            mods = <(MOD_RCTL)>;
+            keep-mods = <(MOD_RCTL)>;
+        };
+        hm_c_tg: homerow_mods_lctrl_tg {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LONG";
+            label = "HOMEROW_MOD_MORPH_LCTRL_TG";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings =
+                <&kp>,
+                <&t_g>;
+        };
+        hm_c_rs: homerow_mods_lctrl_rs {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_MORPH_LCTRL_RS";
             #binding-cells = <2>;
             tapping-term-ms = <210>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings =
                 <&kp>,
-                <&t_g>;
+                <&r_s>;
         };
     };
 
@@ -132,10 +173,10 @@
 
             label = "MOTO";
             bindings = <
-&hml LALT GRAVE   &kp Q  &kp W        &f_e          &kp P           &g_t            &kp J    &kp L         &kp U          &kp Y        &kp SEMI  &hms BSPC LBKT
-&hml LCTRL EQUAL  &kp A  &hml LALT R  &hms LCTRL S  &hm_lc LSHFT 0  &kp D           &kp H    &hms RSHFT N  &hms RCTRL E   &hml LALT I  &kp O     &kp SQT
-&hml LSHFT MINUS  &kp Z  &kp X        &kp C         &kp V           &kp B           &kp K    &kp M         &kp COMMA      &kp DOT      &kp FSLH  &kp RBKT
-                                      &km 3 LGUI    &km 1 DEL       &kp SPACE       &kp RET  &km 2 BSPC    &key_repeat
+&hml LALT GRAVE   &kp Q    &kp W            &f_e          &p_r              &g_t         /*||*/     &kp J    &kp L         &kp U          &kp Y        &semi_p   &hms BSPC LBKT
+&hml LCTRL EQUAL  &kp A    &hm_c_rs LALT 0  &hms LCTRL S  &hm_c_tg LSHFT 0  &kp D        /*||*/     &kp H    &hms RSHFT N  &hms RCTRL E   &hml LALT I  &kp O     &kp SQT
+&hml LSHFT MINUS  &kp Z    &kp X            &kp C         &kp V             &kp B        /*||*/     &kp K    &kp M         &kp COMMA      &kp DOT      &kp FSLH  &kp RBKT
+                                            &km 3 LGUI    &km 1 DEL         &kp SPACE    /*||*/     &kp RET  &km 2 BSPC    &key_repeat
             >;
         };
 
