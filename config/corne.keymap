@@ -68,6 +68,36 @@
                 <&kp>,
                 <&kp>;
         };
+        f_e: f_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F_E";
+            #binding-cells = <0>;
+            bindings =
+                <&kp E>,
+                <&kp F>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+        t_g: t_g {
+            compatible = "zmk,behavior-mod-morph";
+            label = "T_G";
+            #binding-cells = <0>;
+            bindings =
+                <&kp G>,
+                <&kp T>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+        g_t: g_t {
+            compatible = "zmk,behavior-mod-morph";
+            label = "G_T";
+            #binding-cells = <0>;
+            bindings =
+                <&kp T>,
+                <&kp G>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
         hm_lc: homerow_mods_lctrl {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LONG";
@@ -78,36 +108,6 @@
             bindings =
                 <&kp>,
                 <&t_g>;
-        };
-        f_e: f_e {
-            compatible = "zmk,behavior-mod-morph";
-            label = "F_E";
-            #binding-cells = <2>;
-            bindings =
-                <&kp E>,
-                <&kp F>;
-            mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
-        };
-        t_g: t_g {
-            compatible = "zmk,behavior-mod-morph";
-            label = "T_G";
-            #binding-cells = <2>;
-            bindings =
-                <&kp G>,
-                <&kp T>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-        g_t: g_t {
-            compatible = "zmk,behavior-mod-morph";
-            label = "G_T";
-            #binding-cells = <2>;
-            bindings =
-                <&kp T>,
-                <&kp G>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
         };
     };
 
