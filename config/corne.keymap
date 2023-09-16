@@ -68,6 +68,8 @@
                 <&kp>,
                 <&kp>;
         };
+
+        // windows explorer shortcut
         f_e: f_e {
             compatible = "zmk,behavior-mod-morph";
             label = "F_E";
@@ -78,6 +80,8 @@
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
+        // swap t and g on lctrl
         t_g: t_g {
             compatible = "zmk,behavior-mod-morph";
             label = "T_G";
@@ -98,6 +102,8 @@
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
+
+        // r to s, p to r, on lctrl
         r_s: r_s {
             compatible = "zmk,behavior-mod-morph";
             label = "R_S";
@@ -118,6 +124,8 @@
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
+
+        // semi to p on rctrl
         semi_p: semi_p {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMI_P";
@@ -128,6 +136,8 @@
             mods = <(MOD_RCTL)>;
             keep-mods = <(MOD_RCTL)>;
         };
+
+        // nested mod morph on homerow mod
         hm_c_tg: homerow_mods_lctrl_tg {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MOD_MORPH_LCTRL_TG";
@@ -166,9 +176,11 @@
 
         // degree symbol
         degree: degree {
+            compatible = "zmk,behavior-macro";
+            label = "DEGREE";
+            #binding-cells = <0>;
             wait-ms = <5>;
             tap-ms = <5>;
-            #binding-cells = <0>;
             bindings
                 = <&macro_press   &kp LALT>
                 , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>
