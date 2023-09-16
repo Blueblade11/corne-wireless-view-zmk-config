@@ -168,6 +168,7 @@
         degree: degree {
             wait-ms = <5>;
             tap-ms = <5>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press   &kp LALT>
                 , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>
