@@ -125,6 +125,7 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
+        //dvb retrigger
         d_v: d_v {
             compatible = "zmk,behavior-mod-morph";
             label = "D_V";
@@ -221,8 +222,8 @@
             compatible = "zmk,behavior-macro";
             label = "DEGREE";
             #binding-cells = <0>;
-            wait-ms = <5>;
-            tap-ms = <5>;
+            wait-ms = <1>;
+            tap-ms = <1>;
             bindings
                 = <&macro_press   &kp LALT>
                 , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>
