@@ -82,26 +82,26 @@
         };
 
         // swap t and g on lctrl
-        t_g: t_g {
-            compatible = "zmk,behavior-mod-morph";
-            label = "T_G";
-            #binding-cells = <0>;
-            bindings =
-                <&kp T>,
-                <&kp G>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-        g_t: g_t {
-            compatible = "zmk,behavior-mod-morph";
-            label = "G_T";
-            #binding-cells = <0>;
-            bindings =
-                <&kp G>,
-                <&kp T>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
+        // t_g: t_g {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     label = "T_G";
+        //     #binding-cells = <0>;
+        //     bindings =
+        //         <&kp T>,
+        //         <&kp G>;
+        //     mods = <(MOD_LCTL)>;
+        //     keep-mods = <(MOD_LCTL)>;
+        // };
+        // g_t: g_t {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     label = "G_T";
+        //     #binding-cells = <0>;
+        //     bindings =
+        //         <&kp G>,
+        //         <&kp T>;
+        //     mods = <(MOD_LCTL)>;
+        //     keep-mods = <(MOD_LCTL)>;
+        // };
 
         // r to s, p to r, on lctrl
         r_s: r_s {
@@ -138,17 +138,17 @@
         };
 
         // nested mod morph on homerow mod
-        hm_c_tg: homerow_mods_lctrl_tg {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MOD_MORPH_LCTRL_TG";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&t_g>;
-        };
+        // hm_c_tg: homerow_mods_lctrl_tg {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "HOMEROW_MOD_MORPH_LCTRL_TG";
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <150>;
+        //     quick-tap-ms = <0>;
+        //     flavor = "tap-preferred";
+        //     bindings =
+        //         <&kp>,
+        //         <&t_g>;
+        // };
         hm_c_rs: homerow_mods_lctrl_rs {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MOD_MORPH_LCTRL_RS";
@@ -160,6 +160,17 @@
                 <&kp>,
                 <&r_s>;
         };
+        // ht_rp: hold_tap_repeat {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "HOMEROW_MOD_MORPH_LCTRL_RS";
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <210>;
+        //     quick-tap-ms = <0>;
+        //     flavor = "tap-preferred";
+        //     bindings =
+        //         <&kp>,
+        //         <&r_s>;
+        // };
     };
 
     macros {
@@ -197,10 +208,10 @@
 
             label = "moto";
             bindings = <
-&hml LALT GRAVE   &kp Q    &kp W            &f_e          &p_r              &g_t         /*||*/     &kp J    &kp L         &kp U          &kp Y        &semi_p   &hms BSPC LBKT
-&hml LCTRL EQUAL  &kp A    &hm_c_rs LALT 0  &hms LCTRL S  &hm_c_tg LSHFT 0  &kp D        /*||*/     &kp H    &hms RSHFT N  &hms RCTRL E   &hml LALT I  &kp O     &kp SQT
-&hml LSHFT MINUS  &kp Z    &kp X            &kp C         &kp V             &kp B        /*||*/     &kp K    &kp M         &kp COMMA      &kp DOT      &kp FSLH  &kp RBKT
-                                            &km 3 LGUI    &km 1 DEL         &kp SPACE    /*||*/     &kp RET  &km 2 BSPC    &key_repeat
+&hml LALT GRAVE   &kp Q    &kp W            &f_e          &p_r              &kp G        /*||*/     &kp J    &kp L         &kp U          &kp Y        &semi_p   &hms BSPC LBKT
+&hml LCTRL EQUAL  &kp A    &hm_c_rs LALT 0  &hms LCTRL S  &hms LSHFT T      &kp D        /*||*/     &kp H    &hms RSHFT N  &hms RCTRL E   &hml LALT I  &kp O     &kp SQT
+&hml LSHFT MINUS  &kp Z    &kp X            &kp C         &kp V             &kp B        /*||*/     &kp K    &kp M         &kp COMMA      &kp DOT      &kp FSLH  &key_repeat
+                                            &km 3 LGUI    &km 1 DEL         &kp SPACE    /*||*/     &kp RET  &km 2 BSPC    &kp RBKT
             >;
         };
 
